@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curate by NK | Festival gifts, dry fruits & decor</title>
+<meta name="description" content="Ready-to-gift festival hampers, dry fruits and decor, curated for busy families. Order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Mukta:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#F4F1E1; --ink:#2B1D14; --walnut:#3A2418; --marigold:#E39B12;
+  --pistachio:#7C8F4E; --maroon:#7A2E2A; --line:#D9D2B4; --card:#FBF9EE;
+  --serif:"Young Serif",Georgia,"Times New Roman",serif;
+  --sans:"Mukta","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.55}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--marigold);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:8px}
+.sub{color:#5b4a3c;margin:0 0 24px;max-width:56ch}
+section{padding:48px 0}
+
+/* hero */
+.hero{background:var(--walnut);color:#F8EFD8;padding:56px 0 64px}
+.brand{font-family:var(--serif);font-size:1.1rem;color:var(--marigold);margin:0 0 28px}
+.hero h1{font-size:clamp(2.2rem,8vw,4.2rem);max-width:15ch}
+.hero p{max-width:46ch;margin:18px 0 28px;color:#E7DABB}
+.btn{display:inline-block;background:var(--marigold);color:var(--walnut);font-weight:700;text-decoration:none;padding:12px 22px;border-radius:999px;border:0;cursor:pointer;font:700 1rem var(--sans)}
+.btn:hover{background:#F2AE2E}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+.hero .row{display:flex;flex-wrap:wrap;gap:12px}
+.festival{display:inline-block;background:var(--maroon);color:#FBE9C9;padding:4px 14px;border-radius:999px;font-size:.9rem;margin-bottom:18px}
+
+/* combos */
+.combos{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.combo{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.combo.best{border-color:var(--marigold);background:#FFF6DC}
+.combo .price{font-family:var(--serif);font-size:2rem;color:var(--maroon)}
+.combo ul{margin:0;padding-left:18px;flex:1}
+.tag{align-self:flex-start;background:var(--pistachio);color:#fff;font-size:.82rem;font-weight:600;padding:2px 10px;border-radius:999px}
+
+/* products */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tab{background:transparent;border:2px solid var(--line);border-radius:999px;padding:8px 18px;font:600 1rem var(--sans);color:var(--ink);cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--walnut);border-color:var(--walnut);color:#F8EFD8}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.thumb{aspect-ratio:4/3;display:grid;place-items:center;font-size:3.4rem;background:var(--tint,#EDE6C8)}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.card h3{font-size:1.1rem}
+.meta{font-size:.9rem;color:#6a5848}
+.shelf{font-size:.85rem;color:var(--pistachio);font-weight:600}
+.card .foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:8px;padding-top:10px}
+.card .price{font-weight:700;font-size:1.15rem}
+.card .btn{padding:8px 14px;font-size:.92rem}
+
+/* steps */
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));counter-reset:s;padding:0;list-style:none;margin:0}
+.steps li{counter-increment:s;background:var(--card);border-radius:14px;padding:18px 18px 18px 56px;position:relative;border:1px solid var(--line)}
+.steps li::before{content:counter(s);position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;background:var(--marigold);color:var(--walnut);font-weight:700;display:grid;place-items:center}
+
+/* pay */
+.pay{background:var(--pistachio);color:#fff}
+.pay .sub{color:#F1F5E4}
+.qrs{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.qr{background:#fff;color:var(--ink);border-radius:18px;padding:20px;text-align:center}
+.qr .box{width:200px;height:200px;margin:0 auto 12px;border:2px dashed var(--line);border-radius:12px;display:grid;place-items:center;overflow:hidden;font-size:.85rem;color:#6a5848;padding:10px}
+.qr .box img{width:100%;height:100%;object-fit:contain}
+.qr strong{display:block}
+.upi{font-weight:700;word-break:break-all}
+
+footer{background:var(--walnut);color:#E7DABB;padding:32px 0 90px;font-size:.92rem}
+footer a{color:var(--marigold)}
+.float{position:fixed;right:16px;bottom:16px;z-index:10;background:#25D366;color:#073b1b;font-weight:700;text-decoration:none;padding:12px 18px;border-radius:999px;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="brand">Curate by NK</p>
+    <span class="festival" id="festivalTag"></span>
+    <h1>Festival gifts, ready before you are.</h1>
+    <p>Dry fruits, hampers and decor, packed with care for families who are too busy to shop. Pick, message us on WhatsApp, and we deliver.</p>
+    <div class="row">
+      <a class="btn" href="#combos">See gift combos</a>
+      <a class="btn ghost" id="heroWa" href="#" target="_blank" rel="noopener">Chat on WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<section id="combos">
+  <div class="wrap">
+    <h2>Gift combos</h2>
+    <p class="sub">Simple boxes at three prices. Just choose one and we handle the rest.</p>
+    <div class="combos" id="combos-list"></div>
+  </div>
+</section>
+
+<section id="shop" style="padding-top:0">
+  <div class="wrap">
+    <h2>Shop by category</h2>
+    <p class="sub">Everything here keeps well, so you can order early and gift calmly.</p>
+    <div class="tabs" id="tabs" role="group" aria-label="Product categories"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <h2>How to order</h2>
+    <ol class="steps">
+      <li><strong>Pick</strong><br>Choose a combo or items and tap Order on WhatsApp.</li>
+      <li><strong>Confirm</strong><br>We reply with the final amount and delivery date.</li>
+      <li><strong>Pay and receive</strong><br>Pay using the QR below. We pack and deliver.</li>
+    </ol>
+    <p class="sub" style="margin-top:18px" id="cutoff"></p>
+  </div>
+</section>
+
+<section class="pay" id="pay">
+  <div class="wrap">
+    <h2>Connect and pay</h2>
+    <p class="sub">Pay only after we confirm your order on WhatsApp.</p>
+    <div class="qrs">
+      <div class="qr">
+        <div class="box"><img src="whatsapp-qr.png" alt="WhatsApp QR code for Curate by NK" onerror="this.replaceWith('Add whatsapp-qr.png to this folder')"></div>
+        <strong>Scan to chat on WhatsApp</strong>
+        <a id="waLink" href="#" target="_blank" rel="noopener">Or tap here</a>
+      </div>
+      <div class="qr">
+        <div class="box"><img src="payment-qr.png" alt="UPI payment QR code for Curate by NK" onerror="this.replaceWith('Add payment-qr.png to this folder')"></div>
+        <strong>Scan to pay (UPI)</strong>
+        <span class="upi" id="upiId"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <strong style="font-family:var(--serif);font-size:1.2rem;color:#F8EFD8">Curate by NK</strong>
+    <p id="area"></p>
+    <p id="fssai"></p>
+    <p>Home-prepared items are packed fresh in small batches. Each pack shows its packing date and best-before date.</p>
+  </div>
+</footer>
+
+<a class="float" id="floatWa" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+
+<script>
+/* ========= EDIT THIS PART ONLY ========= */
+const CONFIG = {
+  whatsapp: "91XXXXXXXXXX",          // country code + number, no + or spaces
+  upi: "yourname@upi",               // your UPI ID
+  festival: "Diwali orders open",    // shown at the top
+  cutoff: "Order at least 5 days before the festival. Last order date: DD Month.",
+  area: "Delivering in: Your City / Area",
+  fssai: "FSSAI Reg. No.: add here if applicable"
+};
+
+const COMBOS = [
+  { name:"Mithaas Mini", price:299, tag:"", items:["Almonds 100g","Raisins 100g","1 painted diya set","Greeting card"] },
+  { name:"Utsav Box", price:599, tag:"Most gifted", best:true, items:["Almonds, cashews, raisins 100g each","Date and nut laddus (6)","Scented candle","Painted diyas (4)","Greeting card"] },
+  { name:"Grand Celebration", price:999, tag:"", items:["Premium dry fruit mix 400g","Roasted makhana 100g","Chikki pack","Decor toran","Candle and diya set","Gift box with card"] }
+];
+
+/* img: put the photo file name in the folder, e.g. img:"almonds.jpg". Without it an icon is shown. */
+const PRODUCTS = [
+  { cat:"Dry fruits & snacks", name:"Premium Almonds", size:"250 g", price:260, shelf:"6 months, sealed", icon:"🌰", tint:"#EADBB8" },
+  { cat:"Dry fruits & snacks", name:"Cashews (Kaju)", size:"250 g", price:280, shelf:"6 months, sealed", icon:"🥜", tint:"#F0E2BE" },
+  { cat:"Dry fruits & snacks", name:"Raisins (Kishmish)", size:"250 g", price:120, shelf:"6 months, sealed", icon:"🍇", tint:"#E5D6C8" },
+  { cat:"Dry fruits & snacks", name:"Roasted Makhana, masala", size:"100 g", price:110, shelf:"3 months, airtight", icon:"🍿", tint:"#F2E8C9" },
+  { cat:"Dry fruits & snacks", name:"Dry Fruit Laddu", size:"6 pieces", price:240, shelf:"1 month", icon:"🟠", tint:"#F4DDB0" },
+  { cat:"Dry fruits & snacks", name:"Til and Peanut Chikki", size:"250 g", price:130, shelf:"2 months", icon:"🍯", tint:"#EFD9A3" },
+  { cat:"Gift hampers", name:"Herbal Tea and Honey Set", size:"Gift box", price:450, shelf:"1 year", icon:"🍵", tint:"#DDE5C2" },
+  { cat:"Gift hampers", name:"Jaggery Cubes Jar", size:"250 g", price:150, shelf:"6 months", icon:"🟫", tint:"#E8D2B0" },
+  { cat:"Gift hampers", name:"Handmade Soap Trio", size:"3 bars", price:300, shelf:"1 year", icon:"🧼", tint:"#E4E7D2" },
+  { cat:"Gift hampers", name:"Incense and Dhoop Set", size:"Box", price:180, shelf:"2 years", icon:"🪔", tint:"#EEDCC0" },
+  { cat:"Decoration", name:"Painted Clay Diyas", size:"Set of 6", price:150, shelf:"Reusable", icon:"🪔", tint:"#F3DDB5" },
+  { cat:"Decoration", name:"Scented Candles", size:"Set of 2", price:220, shelf:"1 year", icon:"🕯️", tint:"#F0E4C6" },
+  { cat:"Decoration", name:"Marigold Style Toran", size:"1 piece", price:199, shelf:"Reusable", icon:"🌼", tint:"#F6DE9A" },
+  { cat:"Decoration", name:"Rangoli Colours and Stencils", size:"Kit", price:160, shelf:"Long life", icon:"🎨", tint:"#EBD3D0" },
+  { cat:"Decoration", name:"LED Fairy Lights", size:"5 metres", price:249, shelf:"Reusable", icon:"✨", tint:"#E9E2C3" }
+];
+/* ========= END EDIT ========= */
+
+const wa = (msg) => "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(msg);
+const rs = (n) => "₹" + n.toLocaleString("en-IN");
+const el = (t, c, h) => { const e = document.createElement(t); if (c) e.className = c; if (h !== undefined) e.innerHTML = h; return e; };
+
+document.getElementById("festivalTag").textContent = CONFIG.festival;
+document.getElementById("cutoff").textContent = CONFIG.cutoff;
+document.getElementById("area").textContent = CONFIG.area;
+document.getElementById("fssai").textContent = CONFIG.fssai;
+document.getElementById("upiId").textContent = CONFIG.upi;
+const general = wa("Hi Curate by NK, I would like to know more about your festival gifts.");
+["heroWa","waLink","floatWa"].forEach(id => document.getElementById(id).href = general);
+
+const cl = document.getElementById("combos-list");
+COMBOS.forEach(c => {
+  const d = el("div", "combo" + (c.best ? " best" : ""));
+  d.innerHTML = (c.tag ? '<span class="tag">' + c.tag + '</span>' : '') +
+    '<h3>' + c.name + '</h3><div class="price">' + rs(c.price) + '</div><ul>' +
+    c.items.map(i => "<li>" + i + "</li>").join("") + '</ul>';
+  const b = el("a", "btn", "Order on WhatsApp");
+  b.href = wa("Hi Curate by NK, I want to order the " + c.name + " combo (" + rs(c.price) + "). Please share availability and delivery details.");
+  b.target = "_blank"; b.rel = "noopener";
+  d.appendChild(b); cl.appendChild(d);
+});
+
+const cats = ["All", ...new Set(PRODUCTS.map(p => p.cat))];
+const tabs = document.getElementById("tabs"), grid = document.getElementById("grid");
+let active = "All";
+function render() {
+  tabs.innerHTML = "";
+  cats.forEach(c => {
+    const t = el("button", "tab", c);
+    t.type = "button"; t.setAttribute("aria-pressed", c === active);
+    t.onclick = () => { active = c; render(); };
+    tabs.appendChild(t);
+  });
+  grid.innerHTML = "";
+  PRODUCTS.filter(p => active === "All" || p.cat === active).forEach(p => {
+    const card = el("article", "card");
+    const th = el("div", "thumb");
+    th.style.setProperty("--tint", p.tint || "#EDE6C8");
+    if (p.img) { const im = el("img"); im.src = p.img; im.alt = p.name; im.loading = "lazy"; th.appendChild(im); }
+    else { th.textContent = p.icon || "🎁"; th.setAttribute("aria-hidden", "true"); }
+    const body = el("div", "body",
+      '<h3>' + p.name + '</h3><div class="meta">' + p.size + '</div><div class="shelf">Lasts: ' + p.shelf + '</div>');
+    const foot = el("div", "foot", '<span class="price">' + rs(p.price) + '</span>');
+    const b = el("a", "btn", "Order");
+    b.href = wa("Hi Curate by NK, I am interested in: " + p.name + " (" + p.size + ", " + rs(p.price) + "). Is it available?");
+    b.target = "_blank"; b.rel = "noopener";
+    foot.appendChild(b); body.appendChild(foot);
+    card.append(th, body); grid.appendChild(card);
+  });
+}
+render();
+</script>
+</body>
+</html>
